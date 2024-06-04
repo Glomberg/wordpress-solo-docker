@@ -1,4 +1,4 @@
-# Nginx stable + PHP 8.3 + MySQL 8.1 + WordPress 6.5.3 + PhpMyAmin latest
+# Nginx stable + PHP 8.3 + MySQL 8.1 + WordPress 6.5.3 + PhpMyAdmin latest
 
 ## For local dev usage only! Not for production use!
 
@@ -7,7 +7,7 @@
 3) Open the browser and go to http://localhost
 4) Enjoy!
 
-Admin side is on http://localhost/admin
+Admin side is on http://localhost/wp-admin
 username: `admin`, password: `qwerty123456`
 
 PhpMyAdmin side is on http://localhost:8080
