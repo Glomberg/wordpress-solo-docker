@@ -7,7 +7,7 @@ networks:
 services:
   nginx:
     image: nginx:stable-alpine
-    container_name: nginx
+    container_name: wordpress-solo.loc
     ports:
       - "80:80"
     volumes:
@@ -17,19 +17,6 @@ services:
     depends_on:
       - php
       - mysql
-    networks:
-      - internal
-  php:
-    build:
-      context: ./config/php
-      dockerfile: Dockerfile
-    container_name: php
-    volumes:
-      - ./config/php/php.ini:/usr/local/etc/php/php.ini
-      - ./src:/var/www/html
-      - ./data/logs/php:/var/log/php/
-    ports:
-      - "9000:9000"
     networks:
       - internal
   mysql:
@@ -48,6 +35,20 @@ services:
       - MYSQL_DATABASE=$MYSQL_DATABASE
       - MYSQL_USER=$MYSQL_USER
       - MYSQL_PASSWORD=$MYSQL_PASSWORD
+    networks:
+      - internal
+  php:
+    build:
+      context: ./config/php
+      dockerfile: Dockerfile
+    container_name: php
+    volumes:
+      - ./config/php/php.ini:/usr/local/etc/php/php.ini
+      - ./config/php/wp-test-setup.sh:/usr/local/bin/wp-test-setup.s
+      - ./src:/var/www/html
+      - ./data/logs/php:/var/log/php/
+    ports:
+      - "9000:9000"
     networks:
       - internal
   phpmyadmin:
