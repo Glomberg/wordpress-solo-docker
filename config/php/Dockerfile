@@ -2,6 +2,7 @@ FROM php:8.3-fpm
 
 RUN apt-get update && apt-get install -y \
         cron \
+        nano \
         subversion \
         libonig-dev \
         curl \
@@ -28,4 +29,4 @@ WORKDIR /var/www/html
 
 COPY . .
 
-CMD ["php-fpm"]
+CMD php-fpm && cron && tail -f /var/log/cron.log

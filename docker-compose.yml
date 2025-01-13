@@ -47,6 +47,7 @@ services:
       - ./config/php/wp-test-setup.sh:/usr/local/bin/wp-test-setup.s
       - ./src:/var/www/html
       - ./data/logs/php:/var/log/php/
+      - ./data/logs/cron:/var/log/cron/
     ports:
       - "9000:9000"
     networks:
