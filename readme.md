@@ -14,3 +14,7 @@ username: `admin`, password: `qwerty123456`
 
 PhpMyAdmin side is on http://wordpress-solo.loc:8080
 Server: `mysql`, username: `mysql`, password: `mysql`
+
+How to use terminal of necessary container?
+`docker exec -ti php sh`
+And you will allow to run composer and other commands in the container
