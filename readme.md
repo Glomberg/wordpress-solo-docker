@@ -17,4 +17,4 @@ Server: `mysql`, username: `mysql`, password: `mysql`
 
 How to use terminal of necessary container?
 `docker exec -ti php sh`
-And you will allow to run composer and other commands in the container
+And you will allow to run `composer`, `php`, `npm` and other commands in the container
