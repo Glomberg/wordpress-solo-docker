@@ -21,11 +21,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Install wordpress develop environment
 COPY wp-test-setup.sh /usr/local/bin/wp-test-setup.sh
-RUN chmod +x /usr/local/bin/wp-test-setup.sh && /usr/local/bin/wp-test-setup.sh wordpress_develop $MYSQL_USER $MYSQL_PASSWORD mysql latest true
+RUN chmod +x /usr/local/bin/wp-test-setup.sh && /usr/local/bin/wp-test-setup.sh wordpress_develop mysql mysql mysql latest true
 
 RUN cron
-
-USER www-data:www-data
 
 WORKDIR /var/www/html
 

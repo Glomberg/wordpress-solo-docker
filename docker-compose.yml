@@ -46,7 +46,7 @@ services:
     container_name: php
     volumes:
       - ./config/php/php.ini:/usr/local/etc/php/php.ini
-      - ./config/php/wp-test-setup.sh:/usr/local/bin/wp-test-setup.s
+      - ./config/php/wp-test-setup.sh:/usr/local/bin/wp-test-setup.sh
       - ./src:/var/www/html
       - ./data/logs/php:/var/log/php/
       - ./data/logs/cron:/var/log/cron/
