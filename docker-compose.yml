@@ -50,6 +50,9 @@ services:
       - ./src:/var/www/html
       - ./data/logs/php:/var/log/php/
       - ./data/logs/cron:/var/log/cron/
+    env_file: .env
+    environment:
+      - CLEANTALK_TEST_API_KEY=$CLEANTALK_TEST_API_KEY
     ports:
       - "9000:9000"
     networks:
