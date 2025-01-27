@@ -5,7 +5,7 @@
 1) Clone the repository
 2) Add an item to your hosts file `127.0.0.1 wordpress-solo.loc`
 3) Install certificate config/nginx/certs/wordpress-solo.loc.crt into your system `Trusted Root Certification Authorities` storage
-4) Run docker containers `docker-compose up -d`
+4) Run docker containers `docker-compose up -d` *Note, first start will take more time to startup adjust database.
 5) Open the browser and go to https://wordpress-solo.loc
 6) Enjoy!
 
