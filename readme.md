@@ -3,12 +3,14 @@
 ## For local dev usage only! Not for production use!
 
 1) Clone the repository
-2) Run docker containers `docker-compose up -d`
-3) Open the browser and go to http://localhost
-4) Enjoy!
+2) Add an item to your hosts file `127.0.0.1 wordpress-solo.loc`
+3) Install certificate config/nginx/certs/wordpress-solo.loc.crt into your system `Trusted Root Certification Authorities` storage
+4) Run docker containers `docker-compose up -d`
+5) Open the browser and go to https://wordpress-solo.loc
+6) Enjoy!
 
-Admin side is on http://localhost/wp-admin
+Admin side is on https://wordpress-solo.loc/wp-admin
 username: `admin`, password: `qwerty123456`
 
-PhpMyAdmin side is on http://localhost:8080
+PhpMyAdmin side is on http://wordpress-solo.loc:8080
 Server: `mysql`, username: `mysql`, password: `mysql`
