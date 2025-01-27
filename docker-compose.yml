@@ -10,9 +10,11 @@ services:
     container_name: wordpress-solo.loc
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./src:/var/www/html
       - ./config/nginx:/etc/nginx/conf.d
+      - ./config/nginx/certs:/etc/nginx/certs/
       - ./data/logs/nginx:/var/log/nginx/
     depends_on:
       - php
